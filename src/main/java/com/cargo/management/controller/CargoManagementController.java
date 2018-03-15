@@ -19,9 +19,8 @@ public class CargoManagementController {
     private static final String PATH_TO_SHIPS = "C:\\Users\\Mihaela\\Downloads\\cargo-management\\cargo-management\\ships.json";
 
     /**
-     *
      * @return List which contains the characters from json file.
-     * @throws IOException if the I/O operation failed.
+     * @throws IOException    if the I/O operation failed.
      * @throws ParseException if json has bad format.
      */
     public static ArrayList<Character> readCharactersFromJsonFile() throws IOException, ParseException {
@@ -51,9 +50,8 @@ public class CargoManagementController {
     }
 
     /**
-     *
      * @return List which contains the planets from json file.
-     * @throws IOException if the I/O operation failed.
+     * @throws IOException    if the I/O operation failed.
      * @throws ParseException if json has bad format.
      */
     public static ArrayList<Planet> readPlanetsFromJsonFile() throws IOException, ParseException {
@@ -77,9 +75,8 @@ public class CargoManagementController {
     }
 
     /**
-     *
      * @return List which contains the ships from json file.
-     * @throws IOException if the I/O operation failed.
+     * @throws IOException    if the I/O operation failed.
      * @throws ParseException if json has bad format.
      */
     public static ArrayList<Ship> readShipsFromJsonFile() throws IOException, ParseException {
@@ -103,10 +100,9 @@ public class CargoManagementController {
     }
 
     /**
-     * TODO
-     * @return
-     * @throws IOException
-     * @throws ParseException
+     * @return available ships for a character
+     * @throws IOException    if the I/O operation failed.
+     * @throws ParseException if json has bad format.
      */
     public static ArrayList<Ship> shipsAvailableForACharacter(String characterChoosen) throws IOException, ParseException {
         ArrayList<Ship> result = new ArrayList();
@@ -128,7 +124,6 @@ public class CargoManagementController {
     }
 
     /**
-     *
      * @param ship
      * @param cargoWeight
      * @return the number of trips a ship should do
@@ -146,10 +141,9 @@ public class CargoManagementController {
     }
 
     /**
-     *
      * @param destination typed by user
      * @return returns a planet with specific destination
-     * @throws IOException if the I/O operation failed.
+     * @throws IOException    if the I/O operation failed.
      * @throws ParseException if json has bad format.
      */
     public static Planet getPlanet(String destination) throws DestinationException, IOException, ParseException {
@@ -163,7 +157,7 @@ public class CargoManagementController {
     }
 
     /**
-     * @return returns time needed for one trip TODO
+     * @return returns time needed for one trip
      */
     public static Long getTime(Planet planet, Ship ship) {
         return planet.getDistance() / ship.getSpeed();
